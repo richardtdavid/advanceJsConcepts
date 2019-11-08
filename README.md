@@ -23,4 +23,19 @@ function jsEngine(code){
 
 jsEngine('var a = 5') // ['var', 'a', '=', '5']
 ```
+## Interpreter vs Compiler
+* Interpreter
+    * translates on the fly 
+* Compiler 
+    * compiler tries to understand what we want to do
+    * and takes our language and changes it to something else
 
+```javascript
+function someCalulation(x,y){
+    return x + y
+}
+
+for(let i = 0; i < 1000; i++){
+    someCaluation(5,4)
+}
+```
