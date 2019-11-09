@@ -71,3 +71,22 @@ obj2.a = 100
 // delete issue changes the classes so they don't match any more
 delete obj1.x = 30
 ```
+#### Call stack + Memory Heap
+```javascript
+const number = 610 // allocate memory for number 
+const string = 'some text' // allocate memory for string
+const human = { // allocate memory for an object... and it's values
+    first: 'Tom',
+    last: 'sawyer'
+}
+
+// call stack 
+function calculate(){
+    const sumTotal = 4 + 5
+    return sumTotal
+}
+
+// call stack, region in memory that operates as FILO mode
+calculate()
+
+```
