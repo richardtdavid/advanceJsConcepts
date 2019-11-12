@@ -114,3 +114,5 @@ setInterval(() => {
     // referencing objects
 })
 ```
+#### Lexical environment
+In javascript our lexical scope (available data + variables where the function was defined) determines our available variable. Not where the function is called (dynamic scope)
