@@ -116,3 +116,30 @@ setInterval(() => {
 ```
 #### Lexical environment
 In javascript our lexical scope (available data + variables where the function was defined) determines our available variable. Not where the function is called (dynamic scope)
+
+// Function Expression 
+```javascript
+var canada = function() {
+    console.log('cold')
+}
+```
+// Function Declaration 
+```javascript 
+function india(){
+    console.log('warm')
+}
+```
+
+// Function Invocation / Call / Execution
+
+```javascript
+canada()
+india()
+```
+```javascript
+function marry(person1, person2){
+    console.log('arguments', arguments)
+    return `${person1} is now married to ${person2}`
+}
+
+marry('Tim', 'Tina)
