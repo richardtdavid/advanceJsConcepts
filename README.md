@@ -216,3 +216,41 @@ for (var i = 0; i < array.length; i++) {
   })(i);
 }
 ```
+
+# Object Oriented Programming
+
+- ## Factory Functions
+
+  ```javascript
+  function createElf(name, weapon) {
+    return {
+      name: name,
+      weapon: weapon,
+      attack() {
+        return "attack with " + weapon;
+      }
+    };
+  }
+
+  const peter = createElf("peter", "stones");
+  peter.attack();
+  const sam = createElf("sam", "fire");
+  sam.attack();
+  ```
+
+  - ### Object.create()
+
+    ```javascript
+    const elfFunctions = {
+      attack() {
+        return "attack with " + this.weapon;
+      }
+    };
+
+    function createElf(name, weapon) {
+      let newElf = Object.create(elfFunctions);
+      newElf.name = name;
+      newElf.weapon = weapon;
+      return newElf;
+    }
+    ```
