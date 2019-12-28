@@ -1,0 +1,8 @@
+{
+  "name": "advanceJsConcepts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/richardtdavid/advanceJsConcepts.git",
+  "author": "Richard David <driichard@gmail.com>",
+  "license": "MIT"
+}
