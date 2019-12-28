@@ -254,3 +254,24 @@ for (var i = 0; i < array.length; i++) {
       return newElf;
     }
     ```
+
+# Functional Programming
+
+- clear + understandable
+- easy to extend
+- easy to maintain
+- memory efficient
+- dry
+
+## OOP vs FP
+
+- Functional Programming
+  - many operations on fixed data
+  - stateless
+  - pure
+  - declerative
+- Object Oriented Programming
+  - few operations on common data
+  - stateful
+  - side effect
+  - imperative
