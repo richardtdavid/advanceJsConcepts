@@ -72,6 +72,47 @@ const mergeSortedArrays = (a, b) => a.concat(b).sort((x, y) => x - y)
 
 const mergeSortedArrays2 = (a, b) => ([...a, ...b].sort((x, y) => x - y))
 
+// Hash Tables 
+
+class HashTable {
+    constructor(size) {
+        this.data = new Array(size)
+    }
+
+    set(key, value) {
+        let address = this._hash(key)
+        if (!this.data[address]) {
+            this.data[address] = []
+        }
+
+        this.data[address].push([key, value])
+    } // O(1)
+
+    get(key) {
+        let address = this._hash(key)
+        const currentBucket = this.data[address]
+
+        if (currentBucket) {
+            let value
+            currentBucket.forEach(b => {
+                if (b[0] === key) {
+                    value = b[1]
+                }
+            })
+            return value
+        } // O(1) 
+
+        return undefined
+    }
+
+    _hash(key) {
+        let hash = 0
+        for (let i = 0; i < key.length; i++) {
+            hash = (hash + key.charCodeAt(i) * i) % this.data.length
+        }
+        return hash
+    }
+}
 
 
 
@@ -86,4 +127,5 @@ module.exports = {
     reverse2,
     mergeSortedArrays,
     mergeSortedArrays2,
+    HashTable
 }
