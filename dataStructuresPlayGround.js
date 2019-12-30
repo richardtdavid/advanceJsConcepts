@@ -105,6 +105,12 @@ class HashTable {
         return undefined
     }
 
+    keys() {
+        const keysArray = []
+        this.data.forEach(keys => keys.forEach(key => keysArray.push(key[0])))
+        return keysArray
+    }
+
     _hash(key) {
         let hash = 0
         for (let i = 0; i < key.length; i++) {
@@ -114,6 +120,16 @@ class HashTable {
     }
 }
 
+const firstRecurringCharacter = arr => {
+    const set = new Set()
+    return arr.map(char => {
+        if (!set.has(char)) {
+            set.add(char)
+        } else {
+            return char
+        }
+    }).filter(nums => typeof nums !== 'undefined')[0]
+}
 
 
 
@@ -127,5 +143,7 @@ module.exports = {
     reverse2,
     mergeSortedArrays,
     mergeSortedArrays2,
-    HashTable
+    HashTable,
+    firstRecurringCharacter
 }
+

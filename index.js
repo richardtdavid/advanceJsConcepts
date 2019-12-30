@@ -28,9 +28,16 @@ const DataStructures = require('./dataStructuresPlayGround')
 // console.log(sortedArr)
 
 
-const { HashTable } = DataStructures
-const myHashTable = new HashTable(50)
-myHashTable.set('grapes', 10000)
-const ts = myHashTable.get('grapes')
-console.log(ts)
+// const { HashTable } = DataStructures
+// const myHashTable = new HashTable(50)
+// myHashTable.set('grapes', 10000)
+// myHashTable.set('apples', 54)
+// myHashTable.set('oranges', 2)
+// myHashTable.get('grapes')
+// const ts = myHashTable.keys()
+// console.log('keys', ts)
+
+const recurrring = DataStructures.firstRecurringCharacter([2, 1, 1, 2, 3, 5, 1, 2, 4])
+console.log(recurrring)
+
 
